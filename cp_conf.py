@@ -17,16 +17,19 @@ def main():
 
             t = f.replace(test_dir, src_dir)
             is_exists = os.path.exists(t)
-            is_draft = False
 
-            if os.path.splitext(f)[1] == '.md':
-                with open(f, encoding='utf-8') as txt:
-                    datas = txt.readlines()
-                    for data in datas:
-                        if 'draft: true' in data:
-                            print(f)
+            # 中身draftにしないから意味ない
+            # if os.path.splitext(f)[1] == '.md':
+            #     with open(f, encoding='utf-8') as txt:
+            #         datas = txt.readlines()
+            #         for data in datas:
+            #             if 'draft: true' in data:
+            #                 print(f)
 
-            if not is_exists and False:
+            # ファイル名にdraftをつけてるからそれで判断
+            is_not_draft = 'draft' not in f
+
+            if not is_exists and is_not_draft:
                 print(f)
                 # print(t)
                 # 作成日などもコピー
