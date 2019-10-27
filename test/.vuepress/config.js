@@ -1,14 +1,16 @@
-// .vuepress/config.js
-
 module.exports = {
     head: [
         ['link', { rel: 'icon', type: 'image/jpg', href: '/img/favicon.jpg' }],
-        ['link', { href: '/css/style.css', rel: 'stylesheet' }]
+        ['link', { href: '/css/style.css', rel: 'stylesheet' }],
+        ['link', { rel: 'manifest', href: '/manifest.json' }]
     ],
 
     plugins: {
         '@vuepress/google-analytics': {
             'ga': 'UA-150757091-1'
+        },
+        '@vuepress/pwa': {
+            serviceWorker: true
         }
     },
 
@@ -40,7 +42,7 @@ module.exports = {
             nickname: 'ichiya',
 
             // Introduction of yourself (HTML supported)
-            description: '気が向いたとき書きます',
+            description: '気が向いたとき書きます.',
 
             // Email
             email: 'kazuya7187@gmail.com',
@@ -53,7 +55,7 @@ module.exports = {
 
             // Your avatar image
             // Set to external link
-            avatar: '/img/logo.jpg',
+            avatar: '/img/favicon.jpg',
             // Or put into `.vuepress/public` directory. E.g. `.vuepress/public/img/avatar.jpg`
             // avatar: '/img/avatar.jpg',
 
@@ -197,21 +199,23 @@ module.exports = {
         // The content of your navbar links
         nav: [
             { text: 'Home', link: '/', exact: true },
-            { text: 'Posts', link: '/posts/', exact: false }
+            { text: 'Posts', link: '/posts/', exact: false },
+            { text: 'GitHub', link: 'https://github.com/kazuya0202/' },
         ],
 
         // Comments config. See the [Posts Comments] section below.
         comments: {
+            platform: 'github',
             owner: 'kazuya0202',
             repo: 'blog',
             clientId: '0d8d3d839203b62d8deb',
             clientSecret: '121c4e6234b39d21a6d777d6f8f889a997aa03b0',
-            autoCreateIssue: false,
+            // autoCreateIssue: false,
         },
 
         // Pagination config (Optional)
         pagination: {
-            perPage: 5
+            perPage: 10
         },
 
         // Default Pages (Optional, the default value of all pages is `true`)
