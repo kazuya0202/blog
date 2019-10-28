@@ -3,3 +3,5 @@ dist/
 
 # Local Netlify folder
 .netlify
+
+target_path.txt
