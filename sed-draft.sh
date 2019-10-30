@@ -28,22 +28,28 @@ fname="draft*"
 # elif [ "$1" = "true-false" ]; then
 # false to true
 
-if [ "$1" = "dev:sh" ]; then
+if [[ "$1" = "dev:cmd" || "$1" = "dev:wsl" ]]; then
     # from (yarn run dev:2)
     echo -e " * true -> false\n"
 
-    rg.exe -g "$fname" --files "$path" | while IFS= read -r file; do
+    # rg.exe -g "$fname" --files "$path" | while IFS= read -r file; do
+    find "$path" -name "draft*" -type f | while IFS= read -r file; do
         echo "$file"
         sed -i -e "s/draft: true/draft: false/" "$file"
     done
 
     echo ""
-    # sleep 30 &
-    cmd.exe /c yarn dev
+    if [ "$1" = "dev:wsl" ]; then
+        cmd.exe /c yarn dev
+    else
+        yarn dev
+    fi
     echo ""
+    sleep 1
 
     echo -e " * false -> true"
-    rg.exe -g "$fname" --files "$path" | while IFS= read -r file; do
+    # rg.exe -g "$fname" --files "$path" | while IFS= read -r file; do
+    find "$path" -name "draft*" -type f | while IFS= read -r file; do
         echo "$file"
         sed -i -e "s/draft: false/draft: true/" "$file"
     done

@@ -6,7 +6,8 @@
     "private": true,
     "scripts": {
         "dev": "vuepress dev src",
-        "dev:sh": "bash sed-draft.sh dev:sh",
+        "dev:cmd": "bash sed-draft.sh dev:cmd",
+        "dev:wsl": "bash sed-draft.sh dev:wsl",
         "test": "vuepress dev test",
         "build": "vuepress build src",
         "eject": "vuepress eject src",
