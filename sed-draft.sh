@@ -32,7 +32,6 @@ if [[ "$1" = "dev:cmd" || "$1" = "dev:wsl" ]]; then
     # from (yarn run dev:2)
     echo -e " * true -> false\n"
 
-    # rg.exe -g "$fname" --files "$path" | while IFS= read -r file; do
     find "$path" -name "draft*" -type f | while IFS= read -r file; do
         echo "$file"
         sed -i -e "s/draft: true/draft: false/" "$file"
@@ -48,7 +47,6 @@ if [[ "$1" = "dev:cmd" || "$1" = "dev:wsl" ]]; then
     sleep 1
 
     echo -e " * false -> true"
-    # rg.exe -g "$fname" --files "$path" | while IFS= read -r file; do
     find "$path" -name "draft*" -type f | while IFS= read -r file; do
         echo "$file"
         sed -i -e "s/draft: false/draft: true/" "$file"
