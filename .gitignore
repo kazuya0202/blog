@@ -118,6 +118,4 @@ dist
 
 .gitsecret/keys/random_seed
 !*.secret
-
-# com
-.gitsecret/
+src/.vuepress/config.js
