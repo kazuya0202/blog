@@ -9,9 +9,13 @@ title: blog-list
 
 # blog-list
 
-+ gibo
++ ~~gibo~~
 
   + gitignoreとは
+
++ HEIC to JPG
+
+  + mogrify
 
 + chocolatey
 
