@@ -13,6 +13,21 @@ title: blog-list
 
   + gitignoreとは
 
++ python
+
+  + 自分だけのscript
+
+    + import kazuya0202 as kz
+
+    + ```
+      D:\scoop\kazuya\apps\python\3.7.4\Lib
+      ```
+
++ .gitconfig
+
+  + --global config
+  + alias
+
 + HEIC to JPG
 
   + mogrify
