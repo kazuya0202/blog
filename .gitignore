@@ -116,7 +116,6 @@ dist
 # TernJS port file
 .tern-port
 
-.gitsecret/keys/random_seed
-!*.secret
-src/.vuepress/config.js
-
+# .gitsecret/keys/random_seed
+# !*.secret
+# src/.vuepress/config.js
