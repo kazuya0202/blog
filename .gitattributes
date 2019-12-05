@@ -1,2 +1,2 @@
 src/.vuepress/config.js filter=git-crypt diff=git-crypt
-
+src/_posts/draft*.md filter=git-crypt diff=git-crypt
