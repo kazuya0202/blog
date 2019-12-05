@@ -12,7 +12,7 @@
         "dev:wsl": "bash sed-draft.sh dev:wsl",
         "draft": "bash sed-draft.sh",
         "prev": "yarn build && netlify deploy -d src/.vuepress/dist/",
-        "prod": "netlify deploy -p -d src/.vuepress/dist/ -m update"
+        "prod": "yarn build && netlify deploy -p -d src/.vuepress/dist/ -m update"
     },
     "devDependencies": {
         "@vuepress/plugin-google-analytics": "^1.1.0",
