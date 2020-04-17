@@ -7,9 +7,7 @@
     "scripts": {
         "dev": "vuepress dev src",
         "build": "vuepress build src",
-        "eject": "vuepress eject src",
-        "prev": "yarn build && netlify deploy -d src/.vuepress/dist/",
-        "prod": "yarn build && netlify deploy -p -d src/.vuepress/dist/ -m publish"
+        "eject": "vuepress eject src"
     },
     "devDependencies": {
         "@vuepress/plugin-google-analytics": "^1.1.0",
