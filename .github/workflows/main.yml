@@ -24,8 +24,8 @@ jobs:
     - name: build
       env:
         GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
-        VSSUE_CLIENT_ID: ${{ secrets.VSSUE_CLIENT_ID }}
-        VSSUE_SECRET_ID: ${{ secrets.VSSUE_SECRET_ID }}
+        VSSUE_ID: ${{ secrets.VSSUE_ID }}
+        VSSUE_SECRET: ${{ secrets.VSSUE_SECRET }}
         GOOGLE_SITE_VERIFICATION_CONTENT: ${{ secrets.GOOGLE_SITE_VERIFICATION_CONTENT }}
       run: yarn install && yarn build
 
