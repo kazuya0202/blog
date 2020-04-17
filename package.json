@@ -8,10 +8,6 @@
         "dev": "vuepress dev src",
         "build": "vuepress build src",
         "eject": "vuepress eject src",
-        "dev:cmd": "bash sed-draft.sh dev:cmd",
-        "dev:win": "yarn dev:cmd",
-        "dev:wsl": "bash sed-draft.sh dev:wsl",
-        "draft": "bash sed-draft.sh",
         "prev": "yarn build && netlify deploy -d src/.vuepress/dist/",
         "prod": "yarn build && netlify deploy -p -d src/.vuepress/dist/ -m publish"
     },
