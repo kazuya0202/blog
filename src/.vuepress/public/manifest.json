@@ -5,7 +5,7 @@
     "background_color": "#3eaf72",
     "display": "standalone",
     "Scope": "/",
-    "start_url": "https://ichiya.netlify.com",
+    "start_url": "https://ichiya.netlify.app",
     "icons": [
         {
             "src": "img/icons/icon-72x72.png",
