@@ -27,7 +27,7 @@ module.exports = {
             copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'],
             copyMessage: 'Copied.',
             duration: 1000, // prompt message display time.
-            showInMobile: false
+            showInMobile: false,
         }
     },
 
@@ -142,7 +142,7 @@ module.exports = {
             repo: 'blog',
             clientId: process.env.VSSUE_ID,
             clientSecret: process.env.VSSUE_SECRET,
-            autoCreateIssue: false
+            autoCreateIssue: process.env.NODE_ENV !== 'development', // this will not create issue autoly in development mode.
         },
 
         // Pagination config (Optional)
