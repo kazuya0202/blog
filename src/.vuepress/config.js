@@ -28,7 +28,8 @@ module.exports = {
             copyMessage: 'Copied.',
             duration: 1000, // prompt message display time.
             showInMobile: false,
-        }
+        },
+        'vuepress-plugin-element-tabs': {}
     },
 
     // Title of your website
