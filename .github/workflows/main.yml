@@ -6,7 +6,7 @@ name: production deploy
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -17,25 +17,25 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@master
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@main
 
-    # Build
-    - name: build
-      env:
-        GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
-        VSSUE_ID: ${{ secrets.VSSUE_ID }}
-        VSSUE_SECRET: ${{ secrets.VSSUE_SECRET }}
-        GOOGLE_SITE_VERIFICATION_CONTENT: ${{ secrets.GOOGLE_SITE_VERIFICATION_CONTENT }}
-      run: |
-        yarn install
-        yarn build
+      # Build
+      - name: build
+        env:
+          GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
+          VSSUE_ID: ${{ secrets.VSSUE_ID }}
+          VSSUE_SECRET: ${{ secrets.VSSUE_SECRET }}
+          GOOGLE_SITE_VERIFICATION_CONTENT: ${{ secrets.GOOGLE_SITE_VERIFICATION_CONTENT }}
+        run: |
+          yarn install
+          yarn build
 
-    # Deploy to Netlify
-    - name: deploy
-      uses: netlify/actions/cli@master
-      with:
-        args: deploy -d src/.vuepress/dist/ -p -m publish
-      env:
-        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      # Deploy to Netlify
+      - name: deploy
+        uses: netlify/actions/cli@master
+        with:
+          args: deploy -d src/.vuepress/dist/ -p -m publish
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
