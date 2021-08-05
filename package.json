@@ -19,7 +19,7 @@
     },
     "dependencies": {
         "@vssue/api-github-v3": "^1.4.7",
-        "@vssue/vuepress-plugin-vssue": "^1.4.7",
+        "@vssue/vuepress-plugin-vssue": "^1.4.8",
         "markdown-it-mark": "^3.0.1",
         "vue-google-adsense": "^1.9.1",
         "vue-script2": "^2.1.0",
