@@ -1020,7 +1020,7 @@
     date-fns "^1.29.0"
     qs "^6.6.0"
 
-"@vssue/vuepress-plugin-vssue@^1.0.0", "@vssue/vuepress-plugin-vssue@^1.4.7":
+"@vssue/vuepress-plugin-vssue@^1.0.0", "@vssue/vuepress-plugin-vssue@^1.4.8":
   version "1.4.8"
   resolved "https://registry.yarnpkg.com/@vssue/vuepress-plugin-vssue/-/vuepress-plugin-vssue-1.4.8.tgz#37b8ada338c1222a143eb648555372d2959f4624"
   integrity sha512-0QzegHl/Rx4/XgXswThIJi4Yk+b6AIaM450jX6p4RbOM6yOTzEKLTMduUo54Rvhq/NHNusu4Yy/w1iY8NTqBEg==
@@ -1264,7 +1264,7 @@
   dependencies:
     nprogress "^0.2.0"
 
-"@vuepress/plugin-pwa@^1.8.0":
+"@vuepress/plugin-pwa@^1.8.2":
   version "1.8.2"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-pwa/-/plugin-pwa-1.8.2.tgz#a82ecaa9f920bfc79f283fb3c224a42540109e19"
   integrity sha512-6dQXMI+oqTQtHK22Ba+crhzP5yyAf+V1qVfapgPb8JxLXUasOhr+083VRz5LMYqDzu6CAXM+P8cUgSSBNjifXw==
@@ -8402,10 +8402,10 @@ vue-class-component@^7.1.0:
   resolved "https://registry.yarnpkg.com/vue-class-component/-/vue-class-component-7.2.6.tgz#8471e037b8e4762f5a464686e19e5afc708502e4"
   integrity sha512-+eaQXVrAm/LldalI272PpDe3+i4mPis0ORiMYxF6Ae4hyuCh15W8Idet7wPUEs4N4YptgFHGys4UrgNQOMyO6w==
 
-vue-google-adsense@^1.9.1:
-  version "1.9.2"
-  resolved "https://registry.yarnpkg.com/vue-google-adsense/-/vue-google-adsense-1.9.2.tgz#4f1725af8a551f504ba5bb362b8197449a5570d3"
-  integrity sha512-fO8chzf8jIeJGQ+L50iqFhxSajrwC7saWjeKOMwd0YZBaG7Ku4FFwVJlx8paUbCVlO6AnJdF9F1gIFI2rmzddQ==
+vue-google-adsense@^1.10.1:
+  version "1.10.1"
+  resolved "https://registry.yarnpkg.com/vue-google-adsense/-/vue-google-adsense-1.10.1.tgz#807fd3e5a0dfd8b1b92e058e5c036d1f50b14ac6"
+  integrity sha512-F8S6TGK4kyDDvBy7plnWkclz/2bnJNLM2GgPn2K0bzxZi5p5/Nul+NHAkUkXpwdI/eoy+M7ibnkOMhvgd7T9rw==
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
@@ -8529,10 +8529,10 @@ vuepress-plugin-nprogress@^1.1.6:
   dependencies:
     nprogress "^0.2.0"
 
-vuepress-plugin-one-click-copy@^1.0.2:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-one-click-copy/-/vuepress-plugin-one-click-copy-1.0.3.tgz#01627d5832849173286630006ac8b8ba041e2322"
-  integrity sha512-wCWGZ8Kpy7s0DDQRwmOgWgBWNdxtXw1irOtBPA7fRtq73bnPVZKW9kcHjZLQySgGymlEq1bmJLW5ipZLA22sxA==
+vuepress-plugin-one-click-copy@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-one-click-copy/-/vuepress-plugin-one-click-copy-1.0.5.tgz#041e3b17802ec4a6cc2ede3f9f9624dbe9d94cb2"
+  integrity sha512-JXDgZ9wF4CPtKStdsuyakRqTFfKDXds3qfz9J5YqQ3WInUz5+7ykYrpT2KoqSOXM8TOtLaG3vlhDGUOY6o2y0g==
 
 vuepress-plugin-redirect@^1.2.3:
   version "1.2.5"
