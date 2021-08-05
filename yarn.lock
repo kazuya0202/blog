@@ -8602,7 +8602,7 @@ vuepress-theme-meteorlxy@^1.9.0:
     vuepress-plugin-table-of-contents "^1.1.5"
     vuepress-plugin-zooming "^1.1.7"
 
-vuepress@^1.8.0:
+vuepress@^1.8.2:
   version "1.8.2"
   resolved "https://registry.yarnpkg.com/vuepress/-/vuepress-1.8.2.tgz#97e8bf979630611fc7b621fc4cc35b798ee5e847"
   integrity sha512-BU1lUDwsA3ghf7a9ga4dsf0iTc++Z/l7BR1kUagHWVBHw7HNRgRDfAZBDDQXhllMILVToIxaTifpne9mSi94OA==
