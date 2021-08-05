@@ -1,89 +1,105 @@
 module.exports = {
     head: [
-        ['link', { rel: 'icon', type: 'image/jpg', href: '/img/favicon.jpg' }],
-        ['link', { href: '/css/style.css', rel: 'stylesheet' }],
-        ['link', { rel: 'manifest', href: '/manifest.json' }],
-        ['meta', { name: 'google-site-verification', content: process.env.GOOGLE_SITE_VERIFICATION_CONTENT }],
+        ["link", { rel: "icon", type: "image/jpg", href: "/img/favicon.jpg" }],
+        ["link", { href: "/css/style.css", rel: "stylesheet" }],
+        ["link", { rel: "manifest", href: "/manifest.json" }],
+        [
+            "meta",
+            {
+                name: "google-site-verification",
+                content: process.env.GOOGLE_SITE_VERIFICATION_CONTENT,
+            },
+        ],
     ],
 
     plugins: {
-        '@vuepress/google-analytics': {
-            'ga': process.env.GOOGLE_ANALYTICS_ID
+        "@vuepress/google-analytics": {
+            ga: process.env.GOOGLE_ANALYTICS_ID,
         },
-        '@vuepress/pwa': {
-            serviceWorker: true
+        "@vuepress/pwa": {
+            serviceWorker: true,
         },
-        'vuepress-plugin-container': {
-            type: 'warning',
-            defaultTitle: 'NOTE',
+        "vuepress-plugin-container": {
+            type: "warning",
+            defaultTitle: "NOTE",
         },
-        'vuepress-plugin-container': {
-            type: 'my-details',
-            before: info => `<details class="my-details"><summary>${info}</summary><div>`,
-            after: '</div></details>',
-            defaultTitle: 'DETAILS',
+        "vuepress-plugin-container": {
+            type: "my-details",
+            before: (info) =>
+                `<details class="my-details"><summary>${info}</summary><div>`,
+            after: "</div></details>",
+            defaultTitle: "DETAILS",
         },
-        'one-click-copy': {
-            copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'],
-            copyMessage: 'Copied.',
+        "one-click-copy": {
+            copySelector: [
+                'div[class*="language-"] pre',
+                'div[class*="aside-code"] aside',
+            ],
+            copyMessage: "Copied.",
             duration: 1000, // prompt message display time.
             showInMobile: false,
         },
-        'vuepress-plugin-element-tabs': {}
+        "vuepress-plugin-element-tabs": {},
+    },
+    markdown: {
+        extendMarkdown: (md) => {
+            md.set({ breaks: true })
+            md.use(require("markdown-it-mark"))
+        },
     },
 
     // Title of your website
-    title: '一本の矢は折れやすい',
+    title: "一本の矢は折れやすい",
 
     // Description of your website
     // description: '',
 
     // Language of your website
     locales: {
-        '/': {
-            lang: 'ja-JP'
-        }
+        "/": {
+            lang: "ja-JP",
+        },
     },
 
     // Theme to use
-    theme: 'meteorlxy',
+    theme: "meteorlxy",
 
     // Theme config
     themeConfig: {
         // Language of this theme. See the [Theme Language] section below.
-        lang: require('./public/lang/ja-JP'),
+        lang: require("./public/lang/ja-JP"),
 
         // Personal infomation (delete the fields if you don't have / don't want to display)
         personalInfo: {
             // Nickname
-            nickname: 'ichiya',
+            nickname: "ichiya",
 
             // Introduction of yourself (HTML supported)
-            description: '自動化への探求',
+            description: "自動化への探求",
 
             // Email
             // email: '',
 
             // Your location
-            location: 'Japan',
+            location: "Japan",
 
             // Your avatar image
             // Set to external link
 
             // Or put into `.vuepress/public` directory. E.g. `.vuepress/public/img/avatar.jpg`
-            avatar: '/img/favicon.jpg',
+            avatar: "/img/favicon.jpg",
 
             // Accounts of SNS
             sns: {
                 github: {
-                    account: 'kazuya0202',
-                    link: 'https://github.com/kazuya0202'
-                }
+                    account: "kazuya0202",
+                    link: "https://github.com/kazuya0202",
+                },
 
                 // facebook: { account: '', link: '' },
                 // twitter: { account: '', link: '' },
                 // gitlab: { account: '', link: '' },
-            }
+            },
         },
 
         // Header Config (Optional)
@@ -94,17 +110,17 @@ module.exports = {
                 // url: '',
 
                 // Use random pattern. If you set it to `false`, and you don't set the image URL, the background will be blank.
-                useGeo: true
+                useGeo: true,
             },
 
             // show title in the header or not
-            showTitle: true
+            showTitle: true,
         },
 
         // Footer Config (Optional)
         footer: {
             // Show 'Powered by VuePress' or not (enable it to support VuePress)
-            poweredBy: true
+            poweredBy: true,
 
             // Show the theme that you are using (enable it to support this theme) (please do not disable it, haha)
             // poweredByTheme: false,
@@ -122,8 +138,8 @@ module.exports = {
                 // url: '',
 
                 // Use random pattern. If you set it to `false`, and you don't set the image URL, the background will be blank.
-                useGeo: true
-            }
+                useGeo: true,
+            },
         },
 
         // Show the last updated time of your posts
@@ -131,24 +147,24 @@ module.exports = {
 
         // The content of your navbar links
         nav: [
-            { text: 'Home', link: '/', exact: true },
-            { text: 'Posts', link: '/posts/', exact: false },
-            { text: 'GitHub', link: 'https://github.com/kazuya0202/' },
+            { text: "Home", link: "/", exact: true },
+            { text: "Posts", link: "/posts/", exact: false },
+            { text: "GitHub", link: "https://github.com/kazuya0202/" },
         ],
 
         // Comments config. See the [Posts Comments] section below.
         comments: {
-            platform: 'github',
-            owner: 'kazuya0202',
-            repo: 'blog',
+            platform: "github",
+            owner: "kazuya0202",
+            repo: "blog",
             clientId: process.env.VSSUE_ID,
             clientSecret: process.env.VSSUE_SECRET,
-            autoCreateIssue: process.env.NODE_ENV !== 'development', // this will not create issue autoly in development mode.
+            autoCreateIssue: process.env.NODE_ENV !== "development", // this will not create issue autoly in development mode.
         },
 
         // Pagination config (Optional)
         pagination: {
-            perPage: 15
+            perPage: 15,
         },
 
         // Default Pages (Optional, the default value of all pages is `true`)
@@ -156,7 +172,7 @@ module.exports = {
             // Allow theme to add Home page (url: /)
             home: true,
             // Allow theme to add Posts page (url: /posts/)
-            posts: true
-        }
-    }
-};
+            posts: true,
+        },
+    },
+}
