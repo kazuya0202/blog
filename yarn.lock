@@ -8529,10 +8529,10 @@ vuepress-plugin-nprogress@^1.1.6:
   dependencies:
     nprogress "^0.2.0"
 
-vuepress-plugin-one-click-copy@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-one-click-copy/-/vuepress-plugin-one-click-copy-1.0.5.tgz#041e3b17802ec4a6cc2ede3f9f9624dbe9d94cb2"
-  integrity sha512-JXDgZ9wF4CPtKStdsuyakRqTFfKDXds3qfz9J5YqQ3WInUz5+7ykYrpT2KoqSOXM8TOtLaG3vlhDGUOY6o2y0g==
+vuepress-plugin-one-click-copy@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-one-click-copy/-/vuepress-plugin-one-click-copy-1.0.6.tgz#71563b1851013705fab6d48b0bda6028dddbf0e7"
+  integrity sha512-apFCcsBwk9IEDm5HwD6dwor30rl8gr0VjPkmrQlFSR2KD7OjK3ZUwioeEvbrcAiZBi35V6YgndLAHksJXRfpnQ==
 
 vuepress-plugin-redirect@^1.2.3:
   version "1.2.5"
